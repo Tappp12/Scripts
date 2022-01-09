@@ -42,15 +42,19 @@ ScriptSection:NewButton("Become mortal", "Makes you mortal", function()
     game:GetService("ReplicatedStorage").Events.guiSpecialEvent:FireServer(unpack(args))
 end)
 
-ScriptSection:NewButton("Receive 1,000 Coins", "House Rewards", function()
+ScriptSection:NewButton("Get Coins 1000", "Gives you coins", function()
+    local args = {[1] = "receiveHouseReward"}
+    game:GetService("ReplicatedStorage").Events.guiSpecialEvent:FireServer(unpack(args))
+end)
+
+ScriptSection:NewButton("Become original Vampire", "Makes you the Original Vampire", function()
     local args = {[1] = "receiveHouseReward"}
     game:GetService("ReplicatedStorage").Events.guiSpecialEvent:FireServer(unpack(args))
 end)
 
 ScriptSection:NewButton("Get turned into a vampire/enter transition", "Turns you into a vampire", function()
-    local args = {
-        [1] = { ["Transition"] = true,["Option"] = "revive",["Tribrid"] = false,["Resurrect"] = true,["Pos"] = CFrame.new(Vector3.new(141.5608215332, 85.19457244873, -990.2373046875), Vector3.new(-0.992456138134, -1.0751814727428e-07, -0.12260024249554))}}
-        game:GetService("ReplicatedStorage").Events.PlayerDeath:FireServer(unpack(args))
+    local args = {[1] = {["Transition"] = true,["Option"] = "revive",["Tribrid"] = false,["Resurrect"] = true,["Pos"] = CFrame.new(Vector3.new(-122.6658782959, 85.326705932617, -115.94474029541), Vector3.new(0.71533179283142, -1.0470026609255e-05, -0.69878500699997))}}
+    game:GetService("ReplicatedStorage").Events.PlayerDeath:FireServer(unpack(args))
 end)
 
 ScriptSection:NewButton("Ressurect yourself from the other side", "Ressurect", function()
@@ -67,10 +71,15 @@ PlayerSection:NewSlider("Jump", "Change your JumpPower", 500, 50, function(s) --
     game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
 end)
 
-MainSection:NewLabel("Scripter - hopee#1854")
+MainSection:NewLabel("Scripter - Unknown")
 
 MainSection:NewLabel("GUI Maker - tappp#4383")
 
 MiscSection:NewButton("Infinite Yield", "Loads Infinite Yield", function()
     loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
 end)
+
+
+
+
+
