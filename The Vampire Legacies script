@@ -71,11 +71,6 @@ MainSection:NewLabel("Scripter - hopee#1854")
 
 MainSection:NewLabel("GUI Maker - tappp#4383")
 
-MiscSection:NewButton("Infinite Yeild", "Loads Infinite Yeild", function()
+MiscSection:NewButton("Infinite Yield", "Loads Infinite Yield", function()
     loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
 end)
-
-
-
-
-
